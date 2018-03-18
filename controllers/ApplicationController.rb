@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
 	require 'bundler'
 	Bundler.require()
 
-	# require '../config/environments'
+	require '../config/environments'
 	
 	enable :sessions
 	set :views, File.expand_path("../../views", __FILE__)
