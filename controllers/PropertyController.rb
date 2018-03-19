@@ -1,4 +1,5 @@
 class PropertyController < ApplicationController
+  # require '../config/environments'
 
   get '/:datesold' do
     str =  "%#{params[:datesold]}%"
