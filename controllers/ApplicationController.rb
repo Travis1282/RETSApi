@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
 	require 'bundler'
 	Bundler.require()
 
-	require './config/environments'
+	# require './config/environments'
 	
 	# enable :sessions
 	# set :views, File.expand_path("../../views", __FILE__)
@@ -21,10 +21,10 @@ class ApplicationController < Sinatra::Base
 		response.headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
 	end
 
-	# ActiveRecord::Base.establish_connection(
-	# 	:adapter => 'postgresql',
-	# 	:database => 'heatmap'
-	# 	)
+	ActiveRecord::Base.establish_connection(
+		:adapter => 'postgresql',
+		:database => 'heatmap'
+		)
 
 	
 	set :allow_origin, :any
