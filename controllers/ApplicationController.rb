@@ -29,6 +29,6 @@ class ApplicationController < Sinatra::Base
 	
 	set :allow_origin, :any
 	set :allow_methods, [:get, :post, :options, :put, :delete]
-	set :allow_credentials, true
+	# set :allow_credentials, true
 
 end
